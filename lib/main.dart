@@ -29,14 +29,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-final atks = Container(
-  child: Column(
-    children: [
-
-    ],
-  ),
-);
+  TextEditingController atkCon = new TextEditingController();
+  TextEditingController hitCon = new TextEditingController();
+  TextEditingController strCon = new TextEditingController();
+  TextEditingController apCon = new TextEditingController();
+  TextEditingController dmgCon = new TextEditingController();
+  TextEditingController touCon = new TextEditingController();
+  TextEditingController wndCon = new TextEditingController();
+  TextEditingController saveCon = new TextEditingController();
+  TextEditingController invulnCon = new TextEditingController();
+  TextEditingController fnpCon = new TextEditingController();
 
   void runTests() {
     setState(() {
@@ -59,7 +61,7 @@ final atks = Container(
               style: Theme.of(context).textTheme.headlineMedium,),
             Row(
               children: <Widget>[
-                Text('Attacks',
+                Text('Attacks  ',
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w800,
@@ -78,7 +80,7 @@ final atks = Container(
             ),
             Row(
               children: <Widget>[
-                Text('Hit        ',
+                Text('Hit          ',
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w800,
@@ -91,6 +93,160 @@ final atks = Container(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Hit',
+                  ),
+                ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Text('Strength',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: 'Roboto',
+                    letterSpacing: 0.5,
+                    fontSize: 20,
+                  ),),
+                Flexible(child:
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Strength',
+                  ),
+                ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Text('AP          ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: 'Roboto',
+                    letterSpacing: 0.5,
+                    fontSize: 20,
+                  ),),
+                Flexible(child:
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'AP',
+                  ),
+                ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Text('Damage ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: 'Roboto',
+                    letterSpacing: 0.5,
+                    fontSize: 20,
+                  ),),
+                Flexible(child:
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Damage',
+                  ),
+                ),),
+              ],
+            ),
+            Text('Defending Profile',
+              style: Theme.of(context).textTheme.headlineMedium,),
+            Row(
+              children: <Widget>[
+                Text('Toughness  ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: 'Roboto',
+                    letterSpacing: 0.5,
+                    fontSize: 20,
+                  ),),
+                Flexible(child:
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Toughness',
+                  ),
+                ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Text('Wounds       ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: 'Roboto',
+                    letterSpacing: 0.5,
+                    fontSize: 20,
+                  ),),
+                Flexible(child:
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Wounds',
+                  ),
+                ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Text('Save            ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: 'Roboto',
+                    letterSpacing: 0.5,
+                    fontSize: 20,
+                  ),),
+                Flexible(child:
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Save',
+                  ),
+                ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Text('Invuln Save',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: 'Roboto',
+                    letterSpacing: 0.5,
+                    fontSize: 20,
+                  ),),
+                Flexible(child:
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Invulnerable Save',
+                  ),
+                ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Text('FNP             ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: 'Roboto',
+                    letterSpacing: 0.5,
+                    fontSize: 20,
+                  ),),
+                Flexible(child:
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Feel No Pain',
                   ),
                 ),),
               ],
