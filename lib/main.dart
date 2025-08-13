@@ -29,11 +29,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  void _incrementCounter() {
+final atks = Container(
+  child: Column(
+    children: [
+
+    ],
+  ),
+);
+
+  void runTests() {
     setState(() {
-      _counter++;
+
     });
   }
 
@@ -48,16 +55,51 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('Attacking Profile'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            Text('Attacking Profile',
+              style: Theme.of(context).textTheme.headlineMedium,),
+            Row(
+              children: <Widget>[
+                Text('Attacks',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: 'Roboto',
+                    letterSpacing: 0.5,
+                    fontSize: 20,
+                  ),),
+                Flexible(child:
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Number of Attacks',
+                  ),
+                ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Text('Hit        ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: 'Roboto',
+                    letterSpacing: 0.5,
+                    fontSize: 20,
+                  ),),
+                Flexible(child:
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Hit',
+                  ),
+                ),),
+              ],
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: runTests,
         tooltip: 'Run Test',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
